@@ -1,0 +1,32 @@
+<include file="Common:header" />
+<include file="Common:leftnav" />
+<div class="layui-body" style="padding: 15px;">
+  <table class="layui-table" lay-data="{height:332, url:'/home/Ajax/getUserList.html', page:true, id:'idTest'}" lay-filter="demo">
+    <thead>
+      <tr>
+        <th lay-data="{type:'checkbox', fixed: 'left'}"></th>
+        <th lay-data="{field:'username', width:120}">站点民称</th>
+        <th lay-data="{field:'userphonenumber', width:160, sort: true}">站点地址</th>
+        <th lay-data="{field:'regtime', width:120, sort: true}">联系人</th>
+        <th lay-data="{field:'wechatopenid', sort: true}">联系电话</th>
+        <th lay-data="{fixed: 'right', width:178, align:'center', toolbar: '#barDemo'}">操作</th>
+      </tr>
+    </thead>
+  </table>
+  <script type="text/html" id="barDemo">
+    <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail">查看</a>
+    <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
+    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+  </script>
+</div>
+<include file="Common:footer" />
+<script>
+layui.use('element', function() {
+  var element = layui.element;
+
+});
+layui.use('table', function(){
+  var table = layui.table;
+  
+});
+</script>
